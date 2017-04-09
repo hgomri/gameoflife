@@ -36,6 +36,17 @@ public class GameOfLifeTest {
 
         assertEquals(gameOfLife.toString(),nextGeneration);
 
+        //case 2 having more than 3 alive neighbours
+        gameOfLife.setAlive(2,5);
+        System.out.println(gameOfLife);
+        gameOfLife.computeNextGeneration();
+        System.out.println(gameOfLife);
+
+        assertEquals(gameOfLife.toString(), ". . . . . . . . \n" +
+                ". . . * . . . . \n" +
+                ". . . * * . . . \n" +
+                ". . . . . . . . \n");
+
     }
 
     @Test
